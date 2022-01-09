@@ -1,0 +1,581 @@
+/* 
+Landing page -Canva
+About us
+Products -Zdrav zivot cards
+Testimonials -Angela
+Friends -Angela
+Contact -w3
+Footer
+*/
+
+/* 
+Dancing+Script:400;700
+Lora:400;700
+Montserrat:100;400;700;900
+Ubuntu: 100;300;400;700;900
+*/
+
+:root {
+  --main: #4e9f3d;
+  --secondary: #1e5128;
+  --dark: #191a19;
+  --light: #d8e9a8;
+}
+
+body {
+  color: rgb(50, 50, 50);
+  font-family: 'Ubuntu';
+  background-color: var(--main);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 60px;
+  color: #fff;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+h1,
+h2 {
+  padding-bottom: 2rem;
+  letter-spacing: 5px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+a {
+  color: black;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: 0.5s;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.form-control {
+  margin: 1rem 0;
+}
+
+input,
+textarea,
+button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  border: none;
+  border-bottom: 2px solid rgb(70, 70, 70);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+button {
+  border-radius: 4px;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* utility classes */
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+}
+
+.inner-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.box {
+  padding: 70px 0;
+}
+
+.dark-section {
+  color: #fff;
+  background-color: var(--main);
+}
+
+.light-section {
+  color: var(--dark);
+  background-color: #fff;
+}
+
+.light-section p {
+  color: rgb(70, 70, 70);
+}
+
+.icon {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 1rem;
+}
+
+/* nav section */
+nav {
+  padding: 0.5rem 0;
+  box-shadow: 2px 2px 8px var(--dark);
+  transition: 2s;
+}
+
+nav .row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .col {
+  flex: 0;
+}
+
+nav .logo {
+  width: 100px;
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul a:hover {
+  background-color: var(--main);
+  color: #fff;
+}
+
+/* header */
+
+header .col:nth-child(1) {
+  position: relative;
+}
+
+header .title {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header .title p {
+  font-size: 32px;
+}
+
+header .decorative {
+  flex: 1.5;
+}
+
+/* about us section */
+
+/* icons section  */
+#icons {
+  text-align: center;
+}
+
+#icons .inner-container {
+  width: 50%;
+}
+
+#icons .icon {
+  color: var(--secondary);
+}
+
+/* products section */
+#products .col {
+  position: relative;
+  padding-bottom: 3rem;
+  margin: 0 0.5rem;
+  box-shadow: 3px 3px 8px var(--dark);
+}
+
+#products h3 {
+  text-align: center;
+  padding: 0.5rem 0 1rem;
+}
+
+#products p {
+  padding: 0.5rem;
+}
+
+#products .product-order {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+#products a {
+  border-radius: 4px;
+  border: 3px solid var(--secondary);
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+#products a:hover {
+  color: var(--dark);
+  background-color: transparent;
+}
+
+/* testimonials section */
+#testimonials {
+  position: relative;
+}
+
+#testimonials .inner-container {
+  width: 900px;
+  overflow: hidden;
+}
+
+#testimonials .carousel {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+#testimonials .testimonial {
+  width: 900px;
+  min-width: 900px;
+}
+
+#testimonials p {
+  font-size: 36px;
+  font-family: 'Lora';
+  margin-bottom: 1rem;
+}
+
+#testimonials .avatar-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#testimonials .avatar {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+#testimonials .name {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 65%;
+  transform: translateY(-50%);
+  width: auto;
+  font-size: 2.5rem;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.prev {
+  left: 2rem;
+}
+.next {
+  right: 2rem;
+}
+
+.next:hover,
+.prev:hover {
+  opacity: 1;
+}
+
+/* contact section */
+#contact .col {
+  padding: 0.5rem 0;
+  color: #fff;
+  background-color: var(--main);
+}
+
+#contact .col:nth-child(2) {
+  background-color: var(--secondary);
+}
+
+#contact p {
+  text-align: center;
+  color: #fff;
+}
+
+#contact form {
+  width: 60%;
+  margin: 36px auto 0;
+}
+
+#contact button {
+  border: 3px solid var(--secondary);
+  background-color: var(--secondary);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: 0.3s;
+}
+
+#contact button:hover {
+  background-color: transparent;
+  color: var(--dark);
+}
+
+#contact button:focus {
+  background-color: transparent;
+  color: var(--dark);
+}
+
+/* footer */
+footer {
+  border-top: 3px solid var(--secondary);
+}
+
+footer h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  padding: 1rem;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+footer .social-icon {
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+footer a {
+  background-color: transparent;
+  color: #fff;
+}
+
+footer a:hover {
+  color: var(--secondary);
+  background-color: transparent;
+}
+
+footer .icon-text {
+  margin-left: 0.5rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* javaScript add class */
+/* nav */
+.show-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  opacity: 0.9;
+}
+
+/* test message when User submit form */
+.message {
+  text-align: center;
+  color: #fff;
+  background-color: var(--main);
+  border: 3px solid var(--secondary);
+  border-radius: 5px;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  width: 300px;
+  height: 100px;
+  padding: 1rem 2rem;
+  line-height: 50px;
+  transform: translate(-50%, -50%);
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+/* responsive */
+/* @media screen and (max-width: 1200px) {
+  
+} */
+
+@media screen and (max-width: 992px) {
+  #products h3 {
+    font-size: 1.2rem;
+  }
+
+  #products p {
+    font-size: 1rem;
+  }
+
+  #testimonials .inner-container {
+    width: 700px;
+  }
+
+  #testimonials .testimonial {
+    width: 700px;
+    min-width: 700px;
+  }
+
+  #testimonials p {
+    font-size: 20px;
+  }
+
+  #testimonials .name {
+    font-size: 0.9rem;
+  }
+
+  footer .social-links {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .row {
+    flex-direction: column;
+  }
+
+  header .col:nth-child(1) {
+    min-height: 50vh;
+  }
+
+  #about p {
+    font-size: 0.9rem;
+  }
+
+  #icons .inner-container {
+    width: 100%;
+  }
+
+  #products .row {
+    flex-direction: column;
+  }
+
+  #products .col {
+    margin-bottom: 1rem;
+  }
+
+  #testimonials .inner-container {
+    width: 550px;
+  }
+
+  #testimonials .testimonial {
+    width: 550px;
+    min-width: 550px;
+  }
+
+  #testimonials p {
+    font-size: 20px;
+  }
+
+  #testimonials .name {
+    font-size: 0.9rem;
+  }
+
+  #contact form {
+    width: 100%;
+  }
+
+  footer .social-links {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  nav .row {
+    flex-direction: column;
+  }
+
+  nav ul a {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  /* testi */
+  #testimonials .inner-container {
+    width: 300px;
+  }
+
+  #testimonials .testimonial {
+    width: 300px;
+    min-width: 300px;
+  }
+
+  #testimonials p {
+    font-size: 20px;
+  }
+
+  #testimonials .name {
+    font-size: 0.9rem;
+  }
+
+  .prev,
+  .next {
+    top: 90%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+  }
+
+  .prev {
+    left: 2rem;
+  }
+  .next {
+    right: 2rem;
+  }
+  /* end testi */
+  #contact .row {
+    flex-direction: column;
+  }
+}
